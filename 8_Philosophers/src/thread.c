@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   thread.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rtimsina <rtimsina@student.42berlin.de>    +#+  +:+       +#+        */
+/*   By: rtimsina <rtimsina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 10:02:17 by rtimsina          #+#    #+#             */
-/*   Updated: 2023/10/01 13:57:31 by rtimsina         ###   ########.fr       */
+/*   Updated: 2023/11/04 17:49:36 by rtimsina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ void	*philo_routine(void	*philos)
 	t_philo	*philo;
 
 	philo = (t_philo *)philos;
-	if (philo->id % 2 == 0)
-		ft_usleep(philo->time_to_eat);
 	while (!dead_flag_check(philo))
 	{
 		philo_eat(philo);
