@@ -60,3 +60,29 @@ Each chef prepares their dish, but before they can serve the entire meal, they m
 
 Without pthread_join: Chefs start cooking independently, and there's no coordination. Each chef finishes their dish without knowing if others have completed theirs.
 With pthread_join: Before serving the full meal, each chef (thread) uses pthread_join to wait for the other threads to finish their tasks. It's like chefs waiting for each other to complete their dishes before serving the entire meal together.
+
+
+			*****************************************************************
+			|																|
+			|							Thread vs Process					|
+			|																|
+			*****************************************************************
+
+Processes are like separate kitchens with independent chefs, while threads are like collaborative teams sharing the same kitchen resources.
+
+Single Chef (No Parallelism):
+	Imagine a single chef (process) working in the kitchen.
+	This chef handles all tasks independently, from chopping vegetables to grilling meat.
+
+
+Hiring Additional Chefs (Processes):
+-	To handle more tasks simultaneously, you decide to hire additional chefs (create multiple processes).
+-	Each chef (process) works independently and has their own set of utensils and resources.
+-	However, communication between chefs might require additional coordination.
+
+
+Team of Chefs Collaborating (Threads):
+-	Instead of hiring additional chefs (creating processes), you decide to hire kitchen assistants (create threads).
+-	Each assistant (thread) collaborates with the main chef (main thread) and shares the same resources 
+-	(kitchen utensils, cutting board).
+-	Communication between the main chef and assistants is easier, but careful coordination is needed to avoid conflicts.
